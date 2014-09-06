@@ -1,0 +1,53 @@
+
+<template name="header">
+
+<nav class="navbar navbar-default navbar-fixed-top transparent-header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     {{#if activeRoute}}
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            
+
+  <strong><a class="navbar-brand" href="{{pathFor 'newPosts'}}">Campus Confess {{school}}</a></strong>
+ {{else}}
+    <!--<a href="{{pathFor 'newPosts'}}" class="discuss btn"><span class="glyphicon glyphicon-chevron-left"> </span></a>!-->
+  <a class="discuss btn"> <span class="glyphicon glyphicon-chevron-left"> </span></a>
+
+      <p class="text-centere small-title"> {{title}}</p>
+
+      {{/if}}
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav">
+       <li class="{{activeRouteClass 'newPosts' 'newPosts'}}">
+            <a href="{{pathFor 'newPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Newest</a>
+          </li>
+          <li class="{{activeRouteClass  bestPosts }}">
+            <a href="{{pathFor 'bestPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Most Agreed With</a>
+
+          </li>
+          <li class="{{activeRouteClass  'mostCommentedPosts'}}">
+            <a href="{{pathFor 'mostCommentedPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Most Commented</a>
+          </li>
+          {{#if currentUser}}
+               <li class="{{activeRouteClass 'pref'}}">
+             <a id='Preferences'  href="{{pathFor 'pref'}}" data-toggle="collapse"  data-target=".nav-collapse"> Preferences </a> 
+            </li>
+          {{/if}}
+      </ul>
+      <ul>
+
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</template>

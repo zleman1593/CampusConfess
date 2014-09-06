@@ -1,0 +1,10 @@
+{
+    "public":{
+        "connectionBanner":{
+            "connectionLostText":"You appear to be offline!",
+            "tryReconnectText":"Reconnect",
+            "reconnectBeforeCountdownText":"Reconnecting in",
+            "reconnectAfterCountdownText":"seconds."
+        }
+    }
+}

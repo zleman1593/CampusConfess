@@ -1,0 +1,26 @@
+<template name="postPage">
+<div style="margin-top: 55px;"> <!--class=' animated fadeIn'>!-->
+
+</div>
+  {{> postItem}}
+    {{#if owner}}
+    <div class="col-md-4 text-center"> 
+<div class="container">
+  <button class='verifyName btn btn-success photo-link'>Would you like to add a photo?</button> 
+  </div>
+   </div>
+  {{/if}}
+  <ul class="comments">
+    {{#each comments}}
+      {{> comment}}
+    {{/each}}
+  </ul>
+  
+  {{#if currentUser}}
+    {{> commentSubmit}}
+  {{else}}
+    <p>Please log in to leave a comment.</p>
+  {{/if}}
+  
+</template>
+

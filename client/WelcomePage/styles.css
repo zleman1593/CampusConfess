@@ -1,0 +1,371 @@
+
+.macawBody {
+  height: 100%;
+  background-image: url('/beachblur.jpg');
+  //background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  //background-attachment: fixed;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Kite One';
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+.about {
+  display: block;
+  float: left;
+  clear: both;
+  width: 27.7545327754%;
+  height: 67px;
+  margin-top: 41px;
+  margin-left: 35.83659%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: rgba(134, 93, 93, 0.76);
+  font-size: 1.375em;
+  line-height: 3.18;
+  text-align: center;
+  text-indent: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.anon1 {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 25.5208333333%;
+  margin-top: 89px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.app {
+  display: block;
+  width: 196px;
+  height: auto;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+    border-radius: 10px;
+}
+
+.confessions {
+  display: block;
+  float: left;
+  clear: both;
+  width: 27.7545327754%;
+  height: 67px;
+  margin-top: 51px;
+  margin-left: 35.97331%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: rgba(94, 111, 139, 0.63);
+  font-size: 1.375em;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.play {
+  display: block;
+  width: 194px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+    border-radius: 10px;
+}
+
+.ratecomment1 {
+  position: relative;
+  float: left;
+  z-index: 7;
+  width: 24.4791666666%;
+  margin-top: 89px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.security1 {
+  position: relative;
+  float: left;
+  z-index: 6;
+  width: 24.4791666666%;
+  margin-top: 89px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.share1 {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 8;
+  width: 25.5208333333%;
+  margin-top: 89px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.stores {
+  float: left;
+  clear: both;
+  width: 27.4820963541%;
+  height: 171px;
+  margin-top: 64px;
+  margin-left: 36.25814%;
+}
+
+.title-buttons {
+  float: left;
+  width: 80%;
+  height: 724px;
+  margin-top: 66px;
+  margin-left: 10%;
+}
+
+.welcometitle {
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2.375em;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+@media(max-width: 872px) {
+  .stores .app,
+  .stores .play {
+    height: auto;
+  }
+
+  .title-buttons {
+    width: 80.0330033003%;
+    height: 802px;
+    margin-top: 46px;
+    margin-left: 9.99857%;
+  }
+
+  .title-buttons .about {
+    width: 99.7%;
+    height: 42px;
+    margin-top: 52px;
+    margin-left: -0.06941%;
+    line-height: 1.38;
+    text-indent: 0;
+  }
+
+  .title-buttons .anon1 {
+    position: relative;
+    clear: both;
+    z-index: 9;
+    width: 99.7200197106%;
+    margin-top: 22px;
+  }
+
+  .title-buttons .confessions {
+    width: 99.6992662095%;
+    height: 45px;
+    margin-left: -0.02687%;
+  }
+
+  .title-buttons .ratecomment1 {
+    position: relative;
+    clear: both;
+    z-index: 7;
+    width: 99.7200197106%;
+    margin-top: -63px;
+  }
+
+  .title-buttons .security1 {
+    position: relative;
+    clear: both;
+    z-index: 6;
+    width: 99.914885992%;
+    margin-top: 65px;
+    margin-left: -0.02687%;
+  }
+
+  .title-buttons .share1 {
+    position: relative;
+    z-index: 8;
+    width: 99.7200197106%;
+    margin-top: 83px;
+  }
+
+  .title-buttons .stores {
+    clear: none;
+    width: 38.6843166241%;
+    margin-top: 21px;
+    margin-left: 31.08992%;
+  }
+}
+
+@media(max-width: 606px) {
+  body {
+    font-size: 1em;
+  }
+
+  .stores .app,
+  .stores .play {
+    height: auto;
+  }
+
+  .title-buttons {
+    margin-left: 10.06601%;
+  }
+
+  .title-buttons .about {
+    margin-left: -0.05799%;
+  }
+
+  .title-buttons .anon1 {
+    position: relative;
+    z-index: 9;
+  }
+
+  .title-buttons .confessions {
+    margin-left: -0.01933%;
+  }
+
+  .title-buttons .ratecomment1 {
+    position: relative;
+    z-index: 7;
+    margin-top: -86px;
+  }
+
+  .title-buttons .security1 {
+    position: relative;
+    z-index: 6;
+    margin-top: 88px;
+    margin-left: 0;
+  }
+
+  .title-buttons .share1 {
+    position: relative;
+    z-index: 8;
+  }
+
+  .title-buttons .stores {
+    width: 57.3360378634%;
+    margin-top: 76px;
+    margin-left: 30.67977%;
+  }
+}
+
+@media(max-width: 462px) {
+  .stores .app,
+  .stores .play {
+    height: auto;
+  }
+
+  .title-buttons {
+    margin-top: 49px;
+    margin-left: 9.99729%;
+  }
+
+  .title-buttons .about {
+    margin-left: -0.06339%;
+  }
+
+  .title-buttons .anon1 {
+    position: relative;
+    z-index: 9;
+  }
+
+  .title-buttons .confessions {
+    margin-left: -0.02113%;
+  }
+
+  .title-buttons .ratecomment1 {
+    position: relative;
+    z-index: 7;
+  }
+
+  .title-buttons .security1 {
+    position: relative;
+    z-index: 6;
+  }
+
+  .title-buttons .share1 {
+    position: relative;
+    z-index: 8;
+  }
+
+  .title-buttons .stores {
+    margin-left: 21.77147%;
+  }
+}
+
+@media(max-width: 297px) {
+  body {
+    font-size: 1em;
+  }
+
+  .stores .app,
+  .stores .play {
+    height: auto;
+  }
+
+  .title-buttons {
+    width: 80.1346801346%;
+    height: 975px;
+    margin-left: 10.10101%;
+  }
+
+  .title-buttons .about {
+    margin-left: -0.05909%;
+  }
+
+  .title-buttons .anon1 {
+    position: relative;
+    z-index: 9;
+  }
+
+  .title-buttons .confessions {
+    margin-left: -0.0197%;
+  }
+
+  .title-buttons .ratecomment1 {
+    position: relative;
+    z-index: 7;
+    margin-top: -108px;
+  }
+
+  .title-buttons .security1 {
+    position: relative;
+    z-index: 6;
+    margin-top: 110px;
+  }
+
+  .title-buttons .share1 {
+    position: relative;
+    z-index: 8;
+  }
+
+  .title-buttons .stores {
+    width: 83.6134453781%;
+    margin-top: 88px;
+    margin-left: 10.60268%;
+  }
+}

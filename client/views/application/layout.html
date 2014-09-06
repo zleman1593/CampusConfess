@@ -1,0 +1,49 @@
+<template name="layout">
+{{>connectionBanner}}!
+
+
+ <!--{{> yield region='header'}}!-->
+ {{> header}}
+
+
+  <div class="container">
+    {{> errors}}
+
+    <div id="main" class="row-fluid">
+
+      {{> yield}}
+          
+    </div>
+  </div>
+
+
+{{ > yield region='footer'}}
+
+
+</template>
+
+
+<template name="universalPage">
+<div class='macawBody'>
+</div>
+</template>
+
+
+
+<template name="footer">
+
+ <footer id='footer'>
+  <div class="container stayPut">
+     <ul>
+          <li>
+             <p class = "navbar-text pull-left">©Copyright 2015 Campus Confess</p>
+          </li>
+          <li>
+            <a href="{{pathFor 'termsandconditions'}}" class = "navbar-text pull-left" >Terms of Service and Privacy Policy</a> 
+          </li>            
+    </ul>             
+</div>
+
+
+</footer>
+</template>

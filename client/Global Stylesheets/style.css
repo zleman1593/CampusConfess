@@ -1,0 +1,832 @@
+
+body {
+  height: 900px;
+  //background-image: url('/beachblur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  background-attachment: fixed;
+  background-color: rgb(210, 228, 236);
+  font-family: Lucida Grande;
+}
+
+
+.navbar-default .navbar-brand {
+color: #030303;
+  font-family: 'Kite One';
+}
+
+
+.termsAndConditions{
+margin-top: 45px;
+  background-color:  rgba(248, 248, 248, 0.93);
+}
+
+
+.imagesize{
+
+  max-width: 300px;
+  border-radius: 7px;
+     display:block;
+    margin:auto;
+}
+
+.postDetails{
+clear:both;
+}
+
+.space{
+margin-top: 7px;
+
+}
+.glyphicon-camera{
+color:black;
+font-size: 12px;
+margin-left: -12px;
+}
+
+.glyphicon-camera:hover{
+
+color:blue;
+font-size: 12.5px;
+}
+
+
+
+.transparent-header{
+background-color: rgba(248, 248, 248, 0.93);
+
+}
+
+.photo-link{
+
+margin-bottom:10px;
+
+}
+
+.timeOfPost {
+  margin-top: 24px;
+      font-size: 10px;
+      float: left;
+      display: block;
+ }
+
+.add-comment{
+
+margin-top: -19px;
+}
+
+
+
+.switch  {
+margin-top: 21px;
+}
+
+
+.switch input {
+    display: none;
+}
+.switch i {
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 20px;
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    border-radius: 20px;
+    box-shadow: inset 0 0 1px rgba(0,0,0,.5);
+}
+.switch i:before {
+    display: block;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+.switch :checked + i {
+    padding-right: 0;
+    padding-left: 20px;
+    box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px lightblue;
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px lightblue;
+}
+
+/*.nav-title{
+ font-size: 15px;
+    margin-left: 70px;
+
+}
+*/
+
+.small-title{
+
+
+  margin-top: -26px;
+}
+.removalRequest-comment{
+
+float: right;
+margin-top: -10px;
+
+}
+.removalRequest-comment:hover{
+color: steelblue;
+}
+
+.removeAccount{
+float: right;
+}
+
+.removeAccount:hover{
+color: blue;
+}
+
+
+.prefs{
+margin-top: 55px;
+
+
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+
+
+#connection-lost-banner + .navbar-fixed-top,
+#connection-try-reconnect + .navbar-fixed-top {
+    top: 41px;
+}
+.navbar-fixed-top + #connection-lost-banner,
+.navbar-fixed-top + #connection-try-reconnect {
+    top: 51px;
+}
+
+
+
+
+
+.closeSubmit{
+float: right;
+margin-top: -10px;
+
+}
+
+
+/*
+p.dashed {border-style: dashed; } 
+*/
+.undoGrey{
+color: black;
+}
+
+
+
+.macawLike{
+ font: 400 1.375em/1.38 'Kite One';
+   color: rgb(0, 0, 0);
+
+}
+
+
+
+
+.disabled {
+//font-color: #C0C0C0;
+color: rgba(122, 116, 116, 0.49);
+
+}
+
+
+/*
+body{
+font-size: 15px;
+
+
+}*/
+.glyphicon-chevron-right  .glyphicon-chevron-left {
+    font-size: 20px;
+  }
+
+.glyphicon-chevron-left {
+margin-top: 10px;
+
+}
+#iron-router-progress {
+    background-color : #3071a9;
+    box-shadow       : 0 0 5px 3071a9;
+}
+
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
+
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html, body {
+  width: auto !important;
+   overflow-x: hidden !important;
+}
+
+@media all and (max-width: 450px)  {
+
+.text-centere{
+ font-size: 15px;
+
+    margin-left: 32%;
+}
+
+   #footer {
+    display: none;
+  }
+
+}
+
+
+@media all and (min-width: 767px) {
+.glyphicon-chevron-left {
+    display: none;
+  }
+
+.text-centere{
+ display: none;
+}
+
+
+}
+
+@media  all and (min-width: 450px) and (max-width: 767px) {
+   #footer {
+    display: none;
+  }
+.mobileScreen {
+
+  display: none;
+}
+
+.text-centere{
+ font-size: 15px;
+
+    margin-left: 40%;
+}
+
+
+}
+
+
+
+
+
+
+
+/*.navbar .nav > li > a {
+
+  padding: 15px 15px 15px 15px;
+
+}*/
+
+.makeCommentsGoAway{
+font-size: 11px;
+
+}
+.commentArea { visibility: hidden; }
+
+.goAway { visibility: visible; 
+//margin-top: 9px;
+font-size: 10px;
+color: black;
+}
+
+.writeComment { display: none; } 
+  
+
+  /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -0px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+.stayPut{
+
+  margin-top: 20%;
+}
+
+
+.grid-block, .main, .post, .comments li, .comment-form {
+  background: #fff;
+    background-color: rgba(94, 111, 139, 0.63);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+
+
+.post:hover {
+    text-decoration: none;
+    background: rgba(123, 161, 161, 1) }
+
+body {
+//background: rgba(255, 255, 255, 0.8);
+  color: black; 
+
+
+}
+
+
+body{
+   /* height: 100%;
+  background: url('/tb.jpg') rgb(255, 255, 255);
+  background-repeat:repeat;
+  background-size: cover;
+  background-position: left top;*/
+ /* background-attachment: fixed;*/
+}
+/*
+.navbar {
+  margin-bottom: 10px; }*/
+  /* line 32, ../sass/style.scss */
+  /*.navbar .navbar-inner {
+    -webkit-border-radius: 0px 0px 3px 3px;
+    -moz-border-radius: 0px 0px 3px 3px;
+    -ms-border-radius: 0px 0px 3px 3px;
+    -o-border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px; }
+*/
+#spinner {
+  height: 300px; }
+
+.post {
+  /* For modern browsers */
+  /* For IE 6/7 (trigger hasLayout) */
+  *zoom: 1;
+  position: relative;
+  opacity: 1; }
+  .post:before, .post:after {
+    content: "";
+    display: table; }
+  .post:after {
+    clear: both; }
+  .post.invisible {
+    opacity: 0; }
+  .post.instant {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; }
+  .post.animate{
+    -webkit-transition: all 300ms 0ms;
+    -webkit-transition-delay: ease-in;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in; }
+
+.post .writeComment{
+//margin-bottom: 0px;
+//padding-bottom: 0px;
+min-height: 20px;
+
+}
+
+.post-content p{
+font-size: 12px;
+
+}
+
+  .post .upvote {
+    display: block;
+    margin: 12px 12px 0 0;
+    float: left; }
+  /*.post .post-content {
+    float: left; }*/
+    .post .post-content h3 {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 18px; }
+      .post .post-content h3 a {
+        display: inline-block;
+        margin-right: 5px; }
+      .post .post-content h3 span {
+        font-weight: normal;
+        font-size: 14px;
+        display: inline-block;
+        color: #aaaaaa; }
+    .post .post-content p {
+      margin: 0; }
+  .post .discuss {
+    display: block;
+    float: right;
+    margin-top: 15px; }
+
+.comments {
+  list-style-type: none;
+  margin: 0; }
+  .comments li h4 {
+    font-size: 16px;
+    margin: 0; }
+    .comments li h4 .date {
+      font-size: 12px;
+      font-weight: normal; }
+    .comments li h4 a {
+      font-size: 12px; }
+  .comments li p:last-child {
+    margin-bottom: 0; }
+
+.dropdown-menu span {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  line-height: 20px;
+  color: #bbb;
+  white-space: nowrap; }
+
+
+.post-confession-box {
+
+  margin-top: 55px; 
+}
+
+.post-confession {
+    font-family: "Gill Sans", Impact, sans-serif;
+    font-size: 20;
+    color: black;
+  display: block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: rgba(123, 101, 101, 1);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 55px; 
+  margin-bottom: 10px; }
+  .post-confession:hover {
+    color: black;
+    background: rgba(173, 161, 161, 1)}
+
+
+
+.load-more {
+    font-family: "Gill Sans", Impact, sans-serif;
+    font-size: 20;
+    color: black;
+  display: block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: rgba(173, 161, 161, 1);
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 10px; }
+  .load-more:hover {
+    //text-decoration: none;
+    color: black;
+    background: rgba(123, 101, 101, 1) }
+
+
+
+    .bg {
+   background:url('/bm.jpg') no-repeat center center;
+  position: fixed;
+  width: 100%;
+  height: 700px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.jumbotron2 {
+  height: 350px;
+  color: white;
+  text-shadow: #444 0 1px 1px;
+  background:transparent;
+}
+    .mainMenu {
+   background:url('/beachblur.jpg') no-repeat center center;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height:10000px; 
+}
+
+    .choice {
+      display: block;
+
+}
+
+.flag{
+color: black;
+float: right;
+font-size: 12px;
+margin-right: -10px;
+top: 10px;
+
+}
+
+.removalRequest{
+  color: black;
+float: right;
+
+}
+
+
+.wrapper {
+  float: right;
+  text-transform: uppercase;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  //margin: 100px 75px 10px 75px;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+  width: 20px;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+
+.wrapper .tooltip {
+  background: #1496bb;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 300%;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  //width: 350%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #1496bb 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+  width: 0;
+}
+  
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+
+
+
+/////////////////////////
+
+
+
+.wrapper2 {
+  float: left;
+  text-transform: uppercase;
+  cursor: help;
+  font-family: "Gill Sans", Impact, sans-serif;
+  font-size: 20px;
+  //margin: 100px 75px 10px 75px;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+  width: 20px;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+}
+
+.wrapper2 .tooltip2 {
+  background: #1496bb;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: 40px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 7%;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper2 .tooltip2:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  //width: 350%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper2 .tooltip2:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #1496bb 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+  width: 0;
+}
+  
+.wrapper2:hover .tooltip2 {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper2 .tooltip2 {
+  display: none;
+}
+
+.lte8 .wrapper2:hover .tooltip2 {
+  display: block;
+}
+
+.dashed{
+  font-color:white;
+  padding-bottom:3px;
+  padding-top: 3px;
+  padding-right: 8px;
+    padding-left: 8px;
+font-color:tan;
+   margin: 10px;
+   line-height: 1.3em;
+   border: 1px dashed #fff;
+   border-radius: 6px;
+     background-color: grey;
+
+}
+
+.dashed:hover{
+   
+
+}
+.upvotable:hover{
+ background-color:  lightgrey;
+
+}
+
+.upvotable{
+
+
+}
+
+
+.votecolor{
+font-color:white;
+color:white;
+
+}
+
+
+.notblue{
+font-color:white;
+
+}

@@ -1,0 +1,14 @@
+<template name="comment">
+  <li>
+    <h4>
+      <span class="author">{{commenter}}</span>
+      <span class="date">{{submittedText}}</span>
+    </h4>
+    <p>{{body}}</p>
+ 
+
+      {{#if ownComment}}
+  <span class="glyphicon glyphicon-remove removalRequest-comment"> </span>
+{{/if}}
+  </li>
+</template>

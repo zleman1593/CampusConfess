@@ -1,0 +1,22 @@
+<template name="postsList">
+<div id="content" >
+
+
+{{#if submit}}
+<div class= "post-confession-box animated bounceInDown">
+{{> postSubmit}}
+</div>
+{{else}}
+ <a class="post-confession" href="{{postSubmit}}">Post A Confession</a>
+ {{/if}}
+  <div class="posts">
+    {{#each postsWithRank}}
+      {{> postItem}}
+    {{/each}}
+    
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{/if}}
+  </div>
+  </div>
+</template>

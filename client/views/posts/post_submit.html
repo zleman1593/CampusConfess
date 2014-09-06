@@ -1,0 +1,39 @@
+<template name="postSubmit">
+
+  <form class="main main-submit">
+
+    <div class="control-group">
+        <div class="controls">
+            <textarea id="confession" name="confession" type="text" class="form-control"  placeholder="Confession" value=""></textarea>
+        </div>
+    </div> 
+{{>photoToSubmit}}
+    <div class="control-group">
+        <div class="controls">
+        {{#if alreadTookPhoto}}
+        <input value="Add photo"  class="btn btn-primary add-photo-main-page btn-sm space"/>
+        {{/if}}
+            <input type="submit" value="Submit" class="btn btn-primary space btn-sm "/>
+        </div>
+    </div>
+    <span class="glyphicon glyphicon-remove closeSubmit"> </span>
+  </form>
+
+</template>
+<template name="postSubmitOuter">
+ {{> yield region='header'}}
+{{> yield}}
+{{ > yield region='footer'}}
+</template>
+
+
+<template name="photoToSubmit">
+  {{#with photo}}
+    <div class="card">
+      <a class="item item-image">
+        <img src="{{image}}" style="width: 200px;
+  height: 200px;">
+      </a>
+    </div>
+  {{/with}}
+</template>

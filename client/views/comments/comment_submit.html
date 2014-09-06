@@ -1,0 +1,28 @@
+<template name="commentSubmit">
+  <form name="comment" class="comment-form">
+    <div class="control-group">
+        <div class="controls">
+            <textarea name="body" class="form-control" rows="2" placeholder="Comment"></textarea>
+
+        </div>
+    </div>
+<!-- 
+ <div class="control-group select-identity">
+        <div class="controls">
+    <div class="btn-group">
+  <button type="button" class="btn btn-default  btn-sm name-choice" value="{{username}}">{{username}}</button>
+  <button type="button" class="btn btn-default  btn-sm name-choice" value="Anonymous" >Anonymous</button>
+  <button type="button" class="btn btn-default  btn-sm name-choice" value="Real Name">Real Name</button>
+</div>
+ </div>
+  </div>!-->
+
+  <div class="control-group">
+        <div class="controls">
+          <label class="switch"><input type="checkbox" checked><i></i></label>
+            <button type="submit" class="btn btn-default btn-sm add-comment">Add Comment as {{commentas}}</button>
+
+        </div>
+    </div>
+  </form>
+</template>

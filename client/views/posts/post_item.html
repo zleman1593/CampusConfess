@@ -1,0 +1,129 @@
+<template name="postItem">
+   <div class="post" {{attributes}}>
+         <li>
+              <p>{{body}}</p>
+        </li>
+    
+   
+        <div class="post-content">
+        {{#if photoexist}}
+                    {{#with photos}}
+    <div class="card">
+      <a class="item item-image">
+        <img  class="imagesize" src="{{image}}">
+      </a>
+    </div>
+  {{/with}}
+                     {{/if}}
+                     <p>{{confession}}</p>
+                  
+                                    </div>
+
+
+
+
+
+
+
+                     {{#if activeRoute}}
+ <li class="postDetails">
+      <h4>
+       <p class="upvote dashed {{upvotedClass2}}"><span class="votecolor"> {{#if upvotedClass}}⬆{{/if}}{{votes}}</span> <span class="undoGrey">
+                     </span> 
+      </p> 
+      
+
+          
+              
+              </h4>
+        </li>
+        <span class="timeOfPost">{{date}}</span>
+
+
+   
+                          
+                              
+                                         <!--
+                                    <li class="writeComment">
+                                         <div class="overlay">
+                                             <ul class="comments">
+                                            {{#if currentUser}}
+                                            {{#each comments}}
+                                            {{> comment}}
+                                            {{/each}}
+                                            {{/if}}
+                                         </ul>
+                                         {{#if currentUser}}
+                                         {{> commentSubmit}}
+                                          <a class="makeCommentsGoAway">Hide Comments</a>
+                                         {{else}}
+                                         <p>Please log in to see and leave a comment.</p>
+                                         {{/if}}
+                                         </div>
+                                    </li>!-->
+                                 
+                     {{#if activeRoute}}
+                                 {{#if showComments commentsCount}}
+                            
+                                           <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">{{pluralize commentsCount "comment"}}<span class="glyphicon glyphicon-chevron-right"> </span></a>
+                                         {{else}}
+  <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">Be the First to Comment<span class="glyphicon glyphicon-chevron-right"> </span></a>
+
+  <!--<span class="notblue glyphicon glyphicon-comment"></span>!-->
+                                         {{/if}}
+
+                                  {{/if}}                  
+                                   
+
+
+
+
+  
+ {{else}}
+
+ {{#if ownPost}}
+
+
+  <span class="glyphicon glyphicon-remove removalRequest"> </span>
+
+{{else}}
+  
+     <div class="wrapper">
+   <a href="#" class='flag'><span class="glyphicon glyphicon-flag"></span></a>
+
+    <div class="tooltip">Flag as Inappropriate </div>
+  </div>
+
+
+   {{/if}}
+
+
+
+{{/if}}
+   </div>
+
+</template>
+
+<!--
+
+<template name="photoList">
+  {{#each photos}}
+    <div class="card">
+      <a class="item item-image">
+        <img  class="imagesize" src="{{image}}">
+      </a>
+    </div>
+  {{/each}}
+</template>
+!-->
+
+<template name="photoList">
+  {{#with photos}}
+    <div class="card">
+      <a class="item item-image">
+        <img  class="imagesize" src="{{image}}">
+      </a>
+    </div>
+  {{/with}}
+</template>
+
