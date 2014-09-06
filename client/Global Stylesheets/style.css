@@ -1,15 +1,4 @@
 
-body {
-  height: 900px;
-  //background-image: url('/beachblur.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left top;
-  background-attachment: fixed;
-  background-color: rgb(210, 228, 236);
-  font-family: Lucida Grande;
-}
-
 
 .navbar-default .navbar-brand {
 color: #030303;
