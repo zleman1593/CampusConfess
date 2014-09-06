@@ -79,7 +79,22 @@ function GetEmailParts( strEmail ){
 
 
 
- user.school =  GetEmailParts(email).domain;
+ //user.school =  GetEmailParts(email).domain;
+schools = [{'schoolName': 'Bowdoin College','emailDomain': 'bowdoin' },{'schoolName': 'University of New Hampshire','emailDomain': 'unh' }];//temp data structure
+ //obj = _.find(schools, function(obj) { return obj.emailDomain == GetEmailParts(email).domain });
+  var emailDomain = GetEmailParts(email).domain;
+for (i = 0; i < schools.length; i++) { 
+
+emailDomain.indexOf(schools[i].emailDomain) > -1;
+if (emailDomain.indexOf(schools[i].emailDomain) > -1){
+var schoolName = schools[i].schoolName;
+  break;
+}
+}
+
+
+user.school = schoolName;
+
   return user;
 });
 

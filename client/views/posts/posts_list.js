@@ -23,7 +23,14 @@ submit: function() {
 Template.postsList.events({
 'click .post-confession': function(e) {
     e.preventDefault();
+/*
+
+var allEdus = parseEduFile('/rawSchools.txt');
+
+alert(Meteor.call('parseEduFile', allEdus ));
+*/
 Session.set('submit', true);
+
 },
 
 'click .load-more': function(e) {
@@ -37,3 +44,22 @@ alert( node.scrollTop);
 
 
 });
+
+
+function parseEduFile(path) {
+  var allEdus = [];
+    $.get(path, function(data) {
+        var lines = data.split('\n');
+
+        for(var i = 0; i < lines.length; i++) {
+      var data = lines.split(': ');
+      allEdus.push({
+        name: data[1],
+        edu: data[0]
+      });
+    }
+    });
+    return allEdus;
+};
+
+

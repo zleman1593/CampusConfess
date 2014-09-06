@@ -14,7 +14,7 @@
       </button>
             
 
-  <strong><a class="navbar-brand" href="{{pathFor 'newPosts'}}">Campus Confess {{school}}</a></strong>
+  <strong><a class="navbar-brand" href="{{pathFor 'newPosts'}}">{{school}}</a></strong>
  {{else}}
     <!--<a href="{{pathFor 'newPosts'}}" class="discuss btn"><span class="glyphicon glyphicon-chevron-left"> </span></a>!-->
   <a class="discuss btn"> <span class="glyphicon glyphicon-chevron-left"> </span></a>
@@ -30,7 +30,7 @@
        <li class="{{activeRouteClass 'newPosts' 'newPosts'}}">
             <a href="{{pathFor 'newPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Newest</a>
           </li>
-          <li class="{{activeRouteClass  bestPosts }}">
+          <li class="{{activeRouteClass  'bestPosts' }}">
             <a href="{{pathFor 'bestPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Most Agreed With</a>
 
           </li>

@@ -6,9 +6,15 @@ Template.header.helpers({
  if (Meteor.user()){
 
       function capitaliseFirstLetter(string){
-          return string.charAt(0).toUpperCase() + string.slice(1);
+          return string.replace(/\b./g, function(m){ return m.toUpperCase(); });// string.charAt(0).toUpperCase() + string.slice(1);
       }
-      return capitaliseFirstLetter(Meteor.user().school.toLowerCase());
+
+
+      if(Meteor.user().school.length < 10){
+      return 'Campus Confess ' + capitaliseFirstLetter(Meteor.user().school.toLowerCase());
+    } else{
+       return capitaliseFirstLetter(Meteor.user().school.toLowerCase());
+    }
 }
 
 return '';

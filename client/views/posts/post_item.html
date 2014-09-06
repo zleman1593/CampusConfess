@@ -28,7 +28,7 @@
                      {{#if activeRoute}}
  <li class="postDetails">
       <h4>
-       <p class="upvote dashed {{upvotedClass2}}"><span class="votecolor"> {{#if upvotedClass}}⬆{{/if}}{{votes}}</span> <span class="undoGrey">
+       <p class="upvote dashed {{upvotedClass2}}"><span class="votecolor"> {{#if upvotedClass}}<span class="glyphicon glyphicon-arrow-up"></span>{{/if}}{{votes}}</span> <span class="undoGrey">
                      </span> 
       </p> 
       
@@ -68,6 +68,8 @@
                                            <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">{{pluralize commentsCount "comment"}}<span class="glyphicon glyphicon-chevron-right"> </span></a>
                                          {{else}}
   <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">Be the First to Comment<span class="glyphicon glyphicon-chevron-right"> </span></a>
+
+
 
   <!--<span class="notblue glyphicon glyphicon-comment"></span>!-->
                                          {{/if}}

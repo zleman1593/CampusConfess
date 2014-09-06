@@ -42,7 +42,7 @@ return GetEmailParts(Meteor.user().emails[0].address).user;
 },
  school: function() {
 
-return GetEmailParts(Meteor.user().emails[0].address).domain;
+return Meteor.user().school;
 
 }
 
