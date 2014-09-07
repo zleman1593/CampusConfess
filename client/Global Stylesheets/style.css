@@ -1,4 +1,6 @@
-
+.postBody{
+width: 50px;
+}
 
 .navbar-default .navbar-brand {
 color: #030303;
@@ -261,6 +263,17 @@ html, body {
    overflow-x: hidden !important;
 }
 
+
+@media all and (min-width: 676px)  {
+
+.post{
+ display: inline-block;
+ max-width: 320px;
+ //min-height:200px;
+}
+
+}
+
 @media all and (max-width: 450px)  {
 
 .text-centere{
@@ -420,7 +433,12 @@ body{
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
-  opacity: 1; }
+  opacity: 1; 
+
+}
+
+
+
   .post:before, .post:after {
     content: "";
     display: table; }
