@@ -1,6 +1,30 @@
 
 Session.set('submit', false);
 
+
+
+Template.postsList.rendered = function() {
+
+
+$('#example-offset-pixels').waypoint(function() {
+   Router.go('nextPath');
+  alert('700 pixels from the top');
+}, { offset: 700 });
+
+      /*function onScroll() {
+        // Check if we're within 100 pixels of the bottom edge of the broser window.
+        var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
+            closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 300);
+
+        if (closeToBottom) {
+        Router.go('nextPath');
+        }
+      };
+
+
+  window.onscroll = onScroll();*/
+};
+
 Template.postsList.helpers({
   postsWithRank: function() {
     this.posts.rewind();
@@ -32,7 +56,7 @@ alert(Meteor.call('parseEduFile', allEdus ));
 Session.set('submit', true);
 
 },
-
+/*
 'click .load-more': function(e) {
   //var currentScroll = window.pageYOffset;
 
@@ -41,11 +65,11 @@ Session.set('submit', true);
 alert( node.scrollTop);
 //Session.set('currentScroll', node.scrollTop);
 },
-
+*/
 
 });
 
-
+/*
 function parseEduFile(path) {
   var allEdus = [];
     $.get(path, function(data) {
@@ -61,5 +85,6 @@ function parseEduFile(path) {
     });
     return allEdus;
 };
+*/
 
 

@@ -9,13 +9,22 @@
 {{else}}
  <a class="post-confession" href="{{postSubmit}}">Post A Confession</a>
  {{/if}}
-  <div class="posts">
-    {{#each postsWithRank}}
-      {{> postItem}}
-    {{/each}}
-    
+  <div class="posts infinite-container">
+
+
+{{#masonryContainer columnWidth=115 transitionDuration="0.1s" gutter=2 id="MasonryContainer" }}
+     {{#each postsWithRank}}
+
+       {{#masonryElement "MasonryContainer"}}
+        {{> postItem}}
+       {{/masonryElement}}
+     {{/each}}
+  {{/masonryContainer}}
+
+
+
     {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
+      <a id='example-offset-pixels' class="load-more" href="{{nextPath}}">Load more</a>
     {{/if}}
   </div>
   </div>
