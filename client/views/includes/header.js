@@ -101,13 +101,13 @@ Meteor.logout();
 'click .glyphicon-chevron-left' : function(e) {
     e.preventDefault();
 history.back();
-
+fadeContentIn();
 },
 
 'click .discuss' : function(e) {
     e.preventDefault();
 history.back();
-
+fadeContentIn();
 },
 
 /*
@@ -143,4 +143,18 @@ alert('touch');
 
 
 //href="{{pathFor 'newPosts'}}"
+fadeContentIn = function() {
+    $('#main').addClass("animated fadeInRight");
+    $('.small-title').addClass("animated fadeInRight");
+     $('.glyphicon-chevron-left').removeClass("animated fadeInRight");
+        setTimeout(doSomething, 2000);
 
+function doSomething() {
+  $('#main').removeClass("animated fadeInRight");
+  $('.small-title').addClass("animated fadeInRight");
+   $('.glyphicon-chevron-left').removeClass("animated fadeInRight");
+
+}
+
+    return $('footer').removeClass("hide");
+}

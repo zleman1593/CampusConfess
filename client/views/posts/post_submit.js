@@ -99,7 +99,7 @@ var textbox = document.getElementById("confession");
     });
         photoId: Session.set('photoId', '');
 
-
+ Router.go('newPosts');
 } else {
   alert('Please type a bit more');
  }

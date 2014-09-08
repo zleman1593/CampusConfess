@@ -1,5 +1,5 @@
 <template name="postItem">
-   <div class="post" {{attributes}}>
+   <div class="post" ><!--{{attributes}}>!-->
    <div class="postBody container">
          <li>
               <p>{{body}}</p>
@@ -8,14 +8,18 @@
    
         <div class="post-content">
         {{#if photoexist}}
-                    {{#with photos}}
+                   
     <div class="card">
+     
       <a class="item item-image">
+      {{#with photos}}
         <img  class="imagesize" src="{{image}}">
+          {{/with}}
       </a>
-    </div>
-  {{/with}}
-                     {{/if}}
+   
+
+         </div>
+                      {{/if}}
                      <p>{{confession}}</p>
                   
                                     </div>
