@@ -1,12 +1,17 @@
-var POST_HEIGHT = 80;
+var POST_HEIGHT = 250;
 var Positions = new Meteor.Collection(null);
 
 
 Template.postItem.helpers({
 
-   photos: function () {
+  /* photos: function () {
 
      return Photos.findOne({'_id':this.photoId});// ,{sort: {"createdAt": -1}});
+    },*/
+
+     image: function () {
+
+     return Photos.findOne({'_id':this.photoId}).image;// ,{sort: {"createdAt": -1}});
     },
 
  photoexist: function () {
@@ -75,7 +80,7 @@ comments: function() {
     }
   },
   attributes: function() {
-    var post = _.extend({}, Positions.findOne({postId: this._id}), this);
+  /*  var post = _.extend({}, Positions.findOne({postId: this._id}), this);
     var newPosition = post._rank * POST_HEIGHT;
     var attributes = {};
     
@@ -93,6 +98,7 @@ comments: function() {
     });
     
     return attributes;
+    */
   }
 });
 
@@ -105,8 +111,10 @@ Template.postItem.events({
 r = confirm("Remove post?");
 
 if (r === true) {
-Router.go('newPosts');
-//TODO: Need to implement this
+   var currentPostId = this._id;
+      Posts.remove(currentPostId);
+      history.back();
+//Router.go('newPosts');
 }
 
     },

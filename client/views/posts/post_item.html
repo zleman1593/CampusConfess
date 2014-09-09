@@ -1,5 +1,5 @@
 <template name="postItem">
-   <div class="post" ><!--{{attributes}}>!-->
+   <div class="post" {{attributes}}><!--{{attributes}}>!-->
    <div class="postBody container">
          <li>
               <p>{{body}}</p>
@@ -12,9 +12,8 @@
     <div class="card">
      
       <a class="item item-image">
-      {{#with photos}}
+
         <img  class="imagesize" src="{{image}}">
-          {{/with}}
       </a>
    
 
@@ -72,7 +71,7 @@
                             
                                            <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">{{pluralize commentsCount "comment"}}<span class="glyphicon glyphicon-chevron-right"> </span></a>
                                          {{else}}
-  <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">Be the First to Comment<span class="glyphicon glyphicon-chevron-right"> </span></a>
+  <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">Be the First to Comment<span class="glyphicon glyphicon-chevron-right"> </span><span class="glyphicon glyphicon-comment"></span></a>
 
 
 

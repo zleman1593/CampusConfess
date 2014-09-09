@@ -9,9 +9,9 @@ spin
 accounts-ui
 accounts-password
 meteor
-mizzao:bootstrap-3
 natestrauser:connection-banner
 iron:router
 natestrauser:animate-css
 voodoohop:masonrify
+mizzao:bootstrap-3
 

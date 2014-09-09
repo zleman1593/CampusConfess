@@ -4,12 +4,14 @@ Session.set('submit', false);
 
 
 Template.postsList.rendered = function() {
-
+  $('#example-offset-pixels').get(0).click();
+/*
 
 $('#example-offset-pixels').waypoint(function() {
-   Router.go('nextPath');
-  alert('700 pixels from the top');
-}, { offset: 700 });
+   //Router.go('nextPath');
+alert('here');
+$('#example-offset-pixels').get(0).click();
+}, { offset: '50%' });*/
 
       /*function onScroll() {
         // Check if we're within 100 pixels of the bottom edge of the broser window.

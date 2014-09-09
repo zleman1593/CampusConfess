@@ -1,3 +1,13 @@
+/*.infinite-container{
+margin-left: 50px;
+}*/
+/*
+@media all and (max-width: 1199px)  {
+
+.infinite-container{
+margin-left: 13%;
+}
+}*/
 .postBody{
 width: 50px;
 }
@@ -15,8 +25,8 @@ margin-top: 45px;
 
 
 .imagesize{
-min-height: 225;
-  max-width: 300px;
+min-height: 225px;
+  width: 300px;
   border-radius: 7px;
      display:block;
     margin:auto;
@@ -203,13 +213,13 @@ font-size: 15px;
 
 
 }*/
-.glyphicon-chevron-right  .glyphicon-chevron-left {
+.glyphicon-chevron-right .glyphicon-comment{
     font-size: 20px;
   }
 
 .glyphicon-chevron-left {
 margin-top: 10px;
-
+ font-size: 20px;
 }
 #iron-router-progress {
     background-color : #3071a9;
@@ -266,6 +276,7 @@ html, body {
 
 @media all and (min-width: 676px)  {
 
+
 .post{
  display: inline-block;
  max-width: 320px;
@@ -275,7 +286,9 @@ html, body {
 }
 
 @media all and (max-width: 450px)  {
-
+/*.infinite-container{
+margin-left: 1px;
+}*/
 .text-centere{
  font-size: 15px;
 
@@ -285,11 +298,26 @@ html, body {
    #footer {
     display: none;
   }
+.glyphicon-chevron-right {
+    display: inline;
+  }
 
+  .glyphicon-comment{
+    display: none;
+  }
 }
 
 
 @media all and (min-width: 767px) {
+.glyphicon-chevron-right {
+    display: none;
+  }
+
+  .glyphicon-comment{
+    display: inline;
+  }
+
+
 .glyphicon-chevron-left {
     display: none;
   }
@@ -302,6 +330,14 @@ html, body {
 }
 
 @media  all and (min-width: 450px) and (max-width: 767px) {
+.glyphicon-chevron-right {
+    display: inline;
+  }
+
+  .glyphicon-comment{
+    display: none;
+  }
+
    #footer {
     display: none;
   }
