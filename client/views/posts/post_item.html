@@ -69,13 +69,20 @@
                      {{#if activeRoute}}
                                  {{#if showComments commentsCount}}
                             
-                                           <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">{{pluralize commentsCount "comment"}}<span class="glyphicon glyphicon-chevron-right"> </span></a>
+                                           <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">{{pluralize commentsCount "comment"}} <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-comment"></span></a>
                                          {{else}}
-  <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">Be the First to Comment<span class="glyphicon glyphicon-chevron-right"> </span><span class="glyphicon glyphicon-comment"></span></a>
+  <a href="{{pathFor 'postPage'}}" class="discuss btn goAway">Be the First to Comment <span class="glyphicon glyphicon-chevron-right"> </span><span class="glyphicon glyphicon-comment"></span></a>
 
 
+<!--
 
-  <!--<span class="notblue glyphicon glyphicon-comment"></span>!-->
+
+<div class="my-bubble"><span>
+<a title="Comment on " rel="nofollow"
+href="#">
+0</a></span></div>!-->
+
+
                                          {{/if}}
 
                                   {{/if}}                  

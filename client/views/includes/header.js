@@ -1,6 +1,6 @@
 Template.header.helpers({
 
-
+/*
  school: function(){
 
  if (Meteor.user()){
@@ -20,7 +20,7 @@ Template.header.helpers({
 return '';
 
   },
-
+*/
 
   title: function() {
 

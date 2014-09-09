@@ -1,13 +1,13 @@
-/*.infinite-container{
-margin-left: 50px;
-}*/
-/*
-@media all and (max-width: 1199px)  {
-
-.infinite-container{
-margin-left: 13%;
+/*.custom #content .my-bubble {
+background:transparent url('/my-comment-bubble.png') 0 0 no-repeat;
+float:right; padding:6px 4px; margin:0px;
+text-align:center; width:50px; height:50px;
 }
+.custom #content .my-bubble span a { display:block; text-align:center;
+border:none; color:#fff; font-family:arial; font-size:28px; line-height:1em;
+font-weight:bold; text-decoration:none; padding:0px;
 }*/
+
 .postBody{
 width: 50px;
 }
@@ -213,8 +213,13 @@ font-size: 15px;
 
 
 }*/
-.glyphicon-chevron-right .glyphicon-comment{
-    font-size: 20px;
+.glyphicon-chevron-right {
+    font-size: 12px;
+  }
+
+.glyphicon-comment{
+    font-size: 11px;
+    color: black;
   }
 
 .glyphicon-chevron-left {
