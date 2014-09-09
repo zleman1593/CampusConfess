@@ -79,6 +79,16 @@ comments: function() {
       return '';
     }
   },
+
+     postWidth: function() {
+   
+if (Router.current().route.name    === 'postPage'){
+     return '';
+    } else {
+        return 'post-width';
+    
+    }
+  },
   attributes: function() {
   /*  var post = _.extend({}, Positions.findOne({postId: this._id}), this);
     var newPosition = post._rank * POST_HEIGHT;

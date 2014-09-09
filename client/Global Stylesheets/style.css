@@ -282,7 +282,7 @@ html, body {
 @media all and (min-width: 676px)  {
 
 
-.post{
+.post-width{
  display: inline-block;
  max-width: 320px;
  //min-height:200px;
