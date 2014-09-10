@@ -22,7 +22,6 @@ margin-top: 45px;
 
 .imagesize{
 min-height: 225px;
-  width: 300px;
   border-radius: 7px;
      display:block;
     margin:auto;
@@ -276,61 +275,71 @@ html, body {
 
 
 @media all and (min-width: 676px)  {
-
-
 .post-width{
  display: inline-block;
  max-width: 320px;
- //min-height:200px;
 }
 
 }
 @media all and (max-width: 992px)  {
-
 .navbar-brand{
  display: none;
-
 }
-
 }
-
 
 @media  all  and (max-width: 653px) {
  .words{
-      display: none;
+  display: none;
   }
+}
 
+@media  all  and (max-width: 375px) {
+
+  .symbols{
+          display: inline;
+padding-left: 15px;
+padding-right: 15px;
+  }
+}
+@media  all  and (min-width: 376px) {
+
+
+
+.symbols{
+  display: inline;
+  padding-left: 24px;
+padding-right: 24px;
+}
+}
+@media  all and (min-width: 495px) and (max-width: 653px) {
+.navbar-nav > li {
+padding-right: 6%;
+}
 }
 
 @media all and (max-width: 450px)  {
 
-
 .hide-nav-things{
-
   display:none;
 }
-
-  .navbar-brand{
-      display: none;
+.navbar-brand{
+  display: none;
   }
 
-.post-width{
+.masonry_element{
 width: 100%;
 }
 
-
-/*.infinite-container{
-margin-left: 1px;
-}*/
 .text-centere{
  font-size: 15px;
 
     margin-left: 32%;
 }
 
-   #footer {
+  #footer {
     display: none;
   }
+
 .glyphicon-chevron-right {
     display: inline;
   }
@@ -363,11 +372,7 @@ margin-left: 1px;
 
 
 }
-.symbols{
-  display: inline;
-  padding-left: 24px;
-padding-right: 24px;
-}
+
 @media  all and (min-width: 450px) and (max-width: 767px) {
 
   .hide-nav-things{
