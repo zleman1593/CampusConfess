@@ -5,19 +5,20 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+      <strong><a class='navbar-brand {{largeDetail}}' href="{{pathFor 'newPosts'}}">Campus Confess</a></strong>
      {{#if activeRoute}}
      
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+<!--
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-            
+      </button>!-->
 
-  <strong><a class="navbar-brand" href="{{pathFor 'newPosts'}}">Campus Confess</a></strong>
  {{else}}
-    <!--<a href="{{pathFor 'newPosts'}}" class="discuss btn"><span class="glyphicon glyphicon-chevron-left"> </span></a>!-->
+    <!--<a href="{{pathFor 'newPosts'}}" class="discuss btn"><span class="glyphicon glyphicon-edit"> </span></a>!-->
   <a class="discuss btn"> <span class="glyphicon glyphicon-chevron-left"> </span></a>
 
       <p class="text-centere small-title"> {{title}}</p>
@@ -26,28 +27,35 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+     <div class='{{largeDetail}}'>
        <ul class="nav navbar-nav">
        <li class="{{activeRouteClass 'newPosts' 'newPosts'}}">
-            <a href="{{pathFor 'newPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Newest</a>
+            <a href="{{pathFor 'newPosts'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words"> Newest</span><span class=" symbols glyphicon glyphicon-time"></span></a>
           </li>
           <li class="{{activeRouteClass  'bestPosts' }}">
-            <a href="{{pathFor 'bestPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Most Agreed With</a>
+            <a href="{{pathFor 'bestPosts'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Most Popular</span><span class=" symbols glyphicon glyphicon-fire"></span></a>
 
           </li>
-          <li class="{{activeRouteClass  'mostCommentedPosts'}}">
-            <a href="{{pathFor 'mostCommentedPosts'}}" data-toggle="collapse"  data-target=".nav-collapse">Most Commented</a>
-          </li>
+         <!-- <li class="{{activeRouteClass  'mostCommentedPosts'}}">
+            <a href="{{pathFor 'mostCommentedPosts'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Most Commented</span><span class=" symbols glyphicon glyphicon-edit"></span></a>
+          </li>!-->
           {{#if currentUser}}
                <li class="{{activeRouteClass 'pref'}}">
-             <a id='Preferences'  href="{{pathFor 'pref'}}" data-toggle="collapse"  data-target=".nav-collapse"> Preferences </a> 
+             <a id='Preferences'  href="{{pathFor 'pref'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Preferences</span><span class="symbols glyphicon glyphicon-wrench"></span></a> 
             </li>
+            {{#if activeRoute}}
+              <li>
+             <a id='navSubmit' href='#' data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Post</span><span class="symbols glyphicon glyphicon-edit"></span></a> 
+            </li>
+             {{/if}}
           {{/if}}
       </ul>
+        </div>
       <ul>
 
         </ul>
-    </div><!-- /.navbar-collapse -->
+      <!-- </div>--><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 

@@ -1,12 +1,8 @@
-/*.custom #content .my-bubble {
-background:transparent url('/my-comment-bubble.png') 0 0 no-repeat;
-float:right; padding:6px 4px; margin:0px;
-text-align:center; width:50px; height:50px;
+
+.navbar-nav > li {
+float: left;
 }
-.custom #content .my-bubble span a { display:block; text-align:center;
-border:none; color:#fff; font-family:arial; font-size:28px; line-height:1em;
-font-weight:bold; text-decoration:none; padding:0px;
-}*/
+
 
 .postBody{
 width: 50px;
@@ -289,8 +285,40 @@ html, body {
 }
 
 }
+@media all and (max-width: 992px)  {
+
+.navbar-brand{
+ display: none;
+
+}
+
+}
+
+
+@media  all  and (max-width: 653px) {
+ .words{
+      display: none;
+  }
+
+}
 
 @media all and (max-width: 450px)  {
+
+
+.hide-nav-things{
+
+  display:none;
+}
+
+  .navbar-brand{
+      display: none;
+  }
+
+.post-width{
+width: 100%;
+}
+
+
 /*.infinite-container{
 margin-left: 1px;
 }*/
@@ -314,6 +342,8 @@ margin-left: 1px;
 
 
 @media all and (min-width: 767px) {
+
+
 .glyphicon-chevron-right {
     display: none;
   }
@@ -333,8 +363,22 @@ margin-left: 1px;
 
 
 }
-
+.symbols{
+  display: inline;
+  padding-left: 24px;
+padding-right: 24px;
+}
 @media  all and (min-width: 450px) and (max-width: 767px) {
+
+  .hide-nav-things{
+
+  display:none;
+}
+
+.masonry_element{
+width: 100%;
+}
+  
 .glyphicon-chevron-right {
     display: inline;
   }

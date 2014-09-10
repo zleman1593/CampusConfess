@@ -40,7 +40,7 @@ Template.singlePageLogin.events({
 
 
 
-      Meteor.loginWithPassword(t.find('#username').value, t.find('#password').value, function(error){
+      Meteor.loginWithPassword(t.find('#username').value.toLowerCase(), t.find('#password').value, function(error){
         
 
 
@@ -85,20 +85,20 @@ Template.singlePageSignUp.events({
     switch(Accounts.ui._options.passwordSignupFields)
     {
     case 'USERNAME_AND_EMAIL':
-      options.username = t.find('#username').value;
-      options.email = t.find('#email').value
+      options.username = t.find('#username').value.toLowerCase();
+      options.email = t.find('#email').value.toLowerCase();
       break;
     case 'USERNAME_AND_OPTIONAL_EMAIL':
-      options.username = t.find('#username').value;
+      options.username = t.find('#username').value.toLowerCase();
       if(t.find('#email').value)
-        options.email = t.find('#email').value
+        options.email = t.find('#email').value.toLowerCase();
       break;
     case 'USERNAME_ONLY':
       options.username = t.find('#username').value;
       break;
     default:
       // 'EMAIL_ONLY'
-      options.email = t.find('#email').value
+      options.email = t.find('#email').value.toLowerCase();
     }
     try{
       t.find('#submit').innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
@@ -169,7 +169,7 @@ Template.singlePageForgotPassword.events({
     try{
       t.find('#submit').innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
       $('.btn').attr("disabled", true);
-      Accounts.forgotPassword({email: t.find('#email').value}, function(error){
+      Accounts.forgotPassword({email: t.find('#email').value.toLowerCase()}, function(error){
         if(error){
           Alert.add(error, t);
         }else{

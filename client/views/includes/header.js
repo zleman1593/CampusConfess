@@ -21,7 +21,17 @@ return '';
 
   },
 */
+largeDetail: function() {
 
+
+if (Router.current().route.name  === 'postPage' || Router.current().route.name   === 'pref'){
+  return 'hide-nav-things';
+} 
+
+  return '';
+
+
+},
   title: function() {
 
    /* var args = Array.prototype.slice.call(arguments, 0);
@@ -124,7 +134,7 @@ history.back();
 */
 
 
-'click .navSubmit': function(e) {
+'click #navSubmit': function(e) {
     e.preventDefault();
  Session.set('submit', true);
 },

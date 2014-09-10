@@ -4,7 +4,11 @@ Session.set('submit', false);
 
 
 Template.postsList.rendered = function() {
+
+  //if (){
   $('#example-offset-pixels').get(0).click();
+
+//}
 /*
 
 $('#example-offset-pixels').waypoint(function() {
