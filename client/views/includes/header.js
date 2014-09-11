@@ -92,14 +92,14 @@ if (Router.current().route.name    === 'postPage' || Router.current().route.name
 });
 
 Template.header.events({
-
+/*
 
 'click li': function(e) {
         // check if window is small enough so dropdown is created
     $(".navbar-collapse").removeClass("in").addClass("collapse");
   
 
-},
+},*/
 
 'click #logOut': function(e) {
     e.preventDefault();
@@ -111,13 +111,13 @@ Meteor.logout();
 'click .glyphicon-chevron-left' : function(e) {
     e.preventDefault();
 history.back();
-fadeContentIn();
+//fadeContentIn();
 },
 
 'click .discuss' : function(e) {
     e.preventDefault();
 history.back();
-fadeContentIn();
+//fadeContentIn();
 },
 
 /*
