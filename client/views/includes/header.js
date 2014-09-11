@@ -120,39 +120,20 @@ history.back();
 //fadeContentIn();
 },
 
-/*
 
-'touchstart .glyphicon-chevron-left' : function(e) {
-    e.preventDefault();
-history.back();
-     // e.stopPropagation();
-  //    history.back();
-//history.back();
-//Location.back();
-},
-
-*/
 
 
 'click #navSubmit': function(e) {
     e.preventDefault();
+    //window.scrollTo(0,0);
+       $('html, body').animate({scrollTop : 0},300);
  Session.set('submit', true);
 },
 
 
 });
-/*
-Touche($('.glyphicon-chevron-left')).on('click', handleClicks);
 
 
-function handleClicks(){
-alert('touch');
-
-
-};*/
-
-
-//href="{{pathFor 'newPosts'}}"
 fadeContentIn = function() {
     $('#main').addClass("animated fadeInRight");
     $('.small-title').addClass("animated fadeInRight");
