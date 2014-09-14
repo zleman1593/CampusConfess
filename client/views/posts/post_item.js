@@ -3,9 +3,11 @@ var Positions = new Meteor.Collection(null);
 
 Template.postItem.rendered = function() {
   if(!Session.get('loadingMore')){
+    if (Router.current().route.name    !== 'postPage'){
     Session.set('numberOfNewPost',Session.get('numberOfNewPost')+1);
        $('.glyphicon-time').addClass("symbols2");
        $('active').addClass("red");
+     }
 
 }
 

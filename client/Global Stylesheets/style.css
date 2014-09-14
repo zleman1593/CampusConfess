@@ -60,7 +60,7 @@ margin-top: 45px;
 
 .imagesize{
 min-height: 225px;
-  border-radius: 7px;
+  border-radius: 3px;
      display:block;
     margin:auto;
 }
@@ -317,7 +317,7 @@ margin-left: 75%;
 
 html, body {
   width: auto !important;
-   overflow-x: hidden !important;
+   //overflow-x: hidden !important;
 }
 
 
@@ -340,14 +340,14 @@ html, body {
   display: none;
   }
   .card{
-  margin-left: -20px;
-margin-right: -20px;
+  margin-left: -26px;
+margin-right: -26px;
 margin-top: -10px;
 }
 #content {
-margin-top: 25px;
-margin-left: 20px;
-margin-right: 20px;
+margin-top: 45px;
+margin-left: 16px;
+margin-right: 16px;
 
 }
 

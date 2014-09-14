@@ -138,7 +138,13 @@ history.back();
 //fadeContentIn();
 },
 
+'click #navNewPosts': function(e) {
+ Session.set('numberOfNewPost',0);
+ $('.glyphicon-time').removeClass("symbols2");
+       $('active').removeClass("red");
+ 
 
+},
 
 
 'click #navSubmit': function(e) {

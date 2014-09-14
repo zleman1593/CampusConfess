@@ -11,7 +11,12 @@ Session.set('removeWookMarkOnSmallScreen', false);
 
 
 Template.postsList.rendered = function() {
-
+$('#example-offset-pixels').waypoint({
+  offset: 'bottom-in-view',
+  handler: function(direction) {
+    alert('load more');
+  }
+  });
 
   enquire.register("screen and (max-width:654px)", {
 
@@ -22,6 +27,7 @@ if ($('.myElements').wookmarkInstance) {
             $('.myElements').wookmarkInstance.clear();
           }
 Session.set('removeWookMarkOnSmallScreen', true);
+//$('.post-width').removeAttr( "style" );
 
    },      
                                 
