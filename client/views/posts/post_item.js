@@ -4,6 +4,17 @@ var Positions = new Meteor.Collection(null);
 
 Template.postItem.helpers({
 
+
+  removeWookMarkOnSmallScreen: function() {
+   if( !Session.get('removeWookMarkOnSmallScreen')){
+
+return 'myElements';
+
+   }
+   return '';
+    },
+
+
   /* photos: function () {
 
      return Photos.findOne({'_id':this.photoId});// ,{sort: {"createdAt": -1}});
@@ -15,6 +26,7 @@ Template.postItem.helpers({
     },
 
  photoexist: function () {
+
       if(this.photoId != ''){
  //Meteor.subscribe('photos',this.photoId);
   Session.set('photoForItem', this.photoId);
@@ -146,6 +158,8 @@ if (r === true) {
     e.preventDefault();
     Meteor.call('flagUp', this._id);
   },
+
+  });
 /*
  'click .discuss': function(e) {
     e.preventDefault();
@@ -189,12 +203,14 @@ Meteor.subscribe('comments',this._id);
 $('.makeCommentsGoAway').css("display","inline-block");
  }*/
 
-});
 
 
 
 
 
+
+
+  
 
 
 

@@ -1,31 +1,43 @@
 <template name="postsList">
+<a class="popup-with-form" href="#test-form" style="display:none;"></a>
 <div id="content" >
 
 
-{{#if submit}}
-<div class= "post-confession-box animated bounceInDown">
-{{> postSubmit}}
-</div>
-{{else}}
- <a class="post-confession" href="{{postSubmit}}">Post A Confession</a>
- {{/if}}
-  <div class="posts infinite-container">
 
 
-{{#masonryContainer columnWidth=15 transitionDuration="0.4s" gutter=2 id="MasonryContainer" }}
+
+
+
+  <div class="posts infinite-container {{removeWookMarkOnSmallScreenPart2}}">
+
+
+<!--{{#masonryContainer columnWidth=15 transitionDuration="0.4s" gutter=2 id="MasonryContainer" }}!-->
+
+
      {{#each postsWithRank}}
 
-       {{#masonryElement "MasonryContainer"}}
+         <div class="{{removeWookMarkOnSmallScreen}}">
         {{> postItem}}
-       {{/masonryElement}}
+              </div>
      {{/each}}
-  {{/masonryContainer}}
+
+<!--{{/masonryContainer}}!-->
 
 
-
-    {{#if nextPath}}
+  
+  </div>
+  {{#if nextPath}}
       <a id='example-offset-pixels' class="load-more" href="{{nextPath}}">Load more</a>
+      <!-- link that opens popup -->
     {{/if}}
   </div>
-  </div>
+
+
+
+<!-- form itself -->
+<form id="test-form" class="mfp-hide white-popup-block">
+  <div class= "post-confession-box">
+{{> postSubmit}}
+</div>
+</form>
 </template>

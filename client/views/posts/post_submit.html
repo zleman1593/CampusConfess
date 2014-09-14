@@ -11,12 +11,13 @@
     <div class="control-group">
         <div class="controls">
         {{#if alreadTookPhoto}}
-        <input value="Add photo"  class="btn btn-primary add-photo-main-page btn-sm space"/>
+        <button type="button"  class="btn btn-primary add-photo-main-page btn-sm space">Add Photo</button>
+
         {{/if}}
-            <input type="submit" value="Submit" class="btn btn-primary space btn-sm "/>
+            <button type="submit" class="btn btn-primary space btn-sm  submit">Submit</button>
         </div>
     </div>
-    <span class="glyphicon glyphicon-remove closeSubmit"> </span>
+    <!--<span class="glyphicon glyphicon-remove closeSubmit"> </span>!-->
   </form>
 
 </template>
@@ -31,8 +32,7 @@
   {{#with photo}}
     <div class="card">
       <a class="item item-image">
-        <img src="{{image}}" style="width: 200px;
-  height: 200px;">
+        <img src="{{image}}">
       </a>
     </div>
   {{/with}}

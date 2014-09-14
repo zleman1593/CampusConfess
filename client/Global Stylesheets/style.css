@@ -1,4 +1,5 @@
 
+
 .navbar-nav > li {
 float: left;
 }
@@ -280,6 +281,7 @@ html, body {
  max-width: 320px;
 }
 
+
 }
 @media all and (max-width: 992px)  {
 .navbar-brand{
@@ -291,7 +293,29 @@ html, body {
  .words{
   display: none;
   }
+  .card{
+  margin-left: -20px;
+margin-right: -20px;
+margin-top: -10px;
 }
+#content {
+margin-top: 25px;
+margin-left: 20px;
+margin-right: 20px;
+
+}
+
+}
+
+@media  all  and (min-width: 654px) {
+#content {
+margin-top: 25px;
+margin-left: 12px;
+margin-right: 12px;
+}
+}
+
+
 
 @media  all  and (max-width: 375px) {
 
@@ -608,10 +632,6 @@ word-wrap: break-word;
   white-space: nowrap; }
 
 
-.post-confession-box {
-
-  margin-top: 55px; 
-}
 
 .post-confession {
     font-family: "Gill Sans", Impact, sans-serif;
@@ -925,5 +945,33 @@ color:white;
 
 .notblue{
 font-color:white;
+
+}
+
+
+.masonry_container {
+position: relative;
+height: 0px;
+}
+
+
+.mfp-bg{
+background-color:rgba(11, 11, 11, 0.56);
+}
+
+
+.post-confession-box {
+max-width: 400px;
+margin-right: auto;
+margin-left: auto;
+}
+
+#confession{
+min-height: 100px;
+}
+
+
+.js-masonry{
+height:auto;
 
 }

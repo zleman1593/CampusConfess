@@ -1,4 +1,4 @@
-if (Meteor.isCordova) {
+/*if (Meteor.isCordova) {
   console.log("Printed only in mobile cordova apps");
 
 
@@ -20,4 +20,4 @@ MeteorCamera.getPicture = function (callback) {
   });
 };
 
-}
+}*/

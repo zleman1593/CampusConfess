@@ -1,3 +1,21 @@
+
+Meteor.startup(function(){
+
+Tracker.autorun(function () {
+
+Session.set("CurrentNumberOfPostsLoaded", Posts.find({}).count());
+//TODO:Need to make this school specific
+alert(Router.current().postsLimit());
+if (Session.set("CurrentNumberOfPostsLoaded") !== Router.current().postsLimit()){
+alert('Someone added a post');
+}
+
+});
+
+});
+
+
+
 Template.header.helpers({
 
 /*
@@ -125,9 +143,11 @@ history.back();
 
 'click #navSubmit': function(e) {
     e.preventDefault();
-    //window.scrollTo(0,0);
-       $('html, body').animate({scrollTop : 0},300);
- Session.set('submit', true);
+     Session.set('submit', true);
+$('.popup-with-form').get(0).click()
+
+//$.magnificPopup.open({".popup-with-form"});
+
 },
 
 

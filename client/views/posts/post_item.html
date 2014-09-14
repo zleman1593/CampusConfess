@@ -1,5 +1,5 @@
 <template name="postItem">
-   <div class="post {{postWidth}}" {{attributes}}><!--{{attributes}}>!-->
+   <div class="post  {{removeWookMarkOnSmallScreen}} {{postWidth}}" {{attributes}}><!--{{attributes}}>!-->
    <div class="postBody container">
          <li>
               <p>{{body}}</p>
@@ -22,7 +22,6 @@
                      <p>{{confession}}</p>
                   
                                     </div>
-
 
 
 
@@ -114,7 +113,7 @@ href="#">
 
 {{/if}}
    </div>
-
+  
 </template>
 
 <!--

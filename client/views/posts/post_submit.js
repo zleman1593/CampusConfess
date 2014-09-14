@@ -36,14 +36,22 @@ return   Photos.findOne(Session.get('photoId'));
 Template.postSubmit.events({
 
 "click .add-photo-main-page": function (e, template) {
-      MeteorCamera.getPicture(function (error, data) {
-        // we have a picture
-        if (!error) {
+ $.magnificPopup.close();
+ var cameraOptions = {
+        width: 800,
+        height: 600
+      };
+
+      MeteorCamera.getPicture(cameraOptions, function (error, data) {
+          if (!error) {
           onSuccess(data, template);
 
         } else{
           alert('Error');
         }
+
+
+
       });
     },
 
@@ -94,12 +102,33 @@ var textbox = document.getElementById("confession");
         if (error.error === 302)
           Router.go('postPage', {_id: error.details})
       } else {
-         Session.set('submit', false);
+         //Session.set('submit', false);
+         $.magnificPopup.close();
       }
     });
-        photoId: Session.set('photoId', '');
+  photoId: Session.set('photoId', '');
+ //Router.go('newPosts');
 
- Router.go('newPosts');
+
+
+
+
+  alert('testclaer');
+            $('.myElements').wookmarkInstance.clear();
+    
+
+       var handler = $('.myElements');
+          handler.wookmark( {
+          // Prepare layout options.
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('.js-masonry'), // Optional, used for some extra CSS styling
+          offset: 5, // Optional, the distance between grid items
+          outerOffset: 20, // Optional, the distance to the containers border
+          //itemWidth: 310 // Optional, the width of a grid item
+          fillEmptySpace: false // Optional, fill the bottom of each column with widths of flexible height
+         });
+
+
 } else {
   alert('Please type a bit more');
  }
@@ -121,7 +150,7 @@ var onSuccess = function (imageData, template) {
       } else {
  Meteor.subscribe('photosWithPhotoId', photoId);
 Session.set('photoId', photoId);
-
+$('.popup-with-form').get(0).click()
       }
     });
 
