@@ -1,6 +1,6 @@
 
-
-
+Session.set('loadingMore',true);
+ Session.set('numberOfNewPost',0);
 Session.set('submit', false);
 
 if($( window ).width() > 654){
@@ -18,7 +18,9 @@ Template.postsList.rendered = function() {
     // OPTIONAL
     // If supplied, triggered when a media query matches.
     match : function() {
-
+if ($('.myElements').wookmarkInstance) {
+            $('.myElements').wookmarkInstance.clear();
+          }
 Session.set('removeWookMarkOnSmallScreen', true);
 
    },      
@@ -30,6 +32,16 @@ Session.set('removeWookMarkOnSmallScreen', true);
 
 Session.set('removeWookMarkOnSmallScreen', false);
 
+ handler.wookmark({
+          // Prepare layout options.
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('.js-masonry'), // Optional, used for some extra CSS styling
+          offset: 5, // Optional, the distance between grid items
+          outerOffset: 20, // Optional, the distance to the containers border
+          //itemWidth: 310 // Optional, the width of a grid item
+          fillEmptySpace: false // Optional, fill the bottom of each column with widths of flexible height
+      });
+
     },    
                                 
     // OPTIONAL, defaults to false
@@ -40,7 +52,7 @@ Session.set('removeWookMarkOnSmallScreen', false);
 });
 
 
- var handler = $('.myElements');
+  handler = $('.myElements');
 
       handler.wookmark({
           // Prepare layout options.

@@ -1,4 +1,41 @@
+//For spinning
 
+.spin {
+-webkit-animation: spin 1.3s infinite linear;
+-moz-animation: spin 1.3s infinite linear;
+-o-animation: spin 1.3s infinite linear;
+animation: spin 1.3s infinite linear;
+-webkit-transform-origin: 50% 58%;
+transform-origin: 50% 58%;
+-ms-transform-origin: 50% 58%;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .navbar-nav > li {
 float: left;
@@ -269,6 +306,15 @@ margin-top: 10px;
     display: none; 
 }
 
+
+@media all and (min-width: 413px)  {
+a#navSubmit {
+margin-left: 75%;
+}
+
+}
+
+
 html, body {
   width: auto !important;
    overflow-x: hidden !important;
@@ -324,6 +370,18 @@ margin-right: 12px;
 padding-left: 15px;
 padding-right: 15px;
   }
+.symbols2{
+  color: red;
+-webkit-animation: spin 1.3s infinite linear;
+-moz-animation: spin 1.3s infinite linear;
+-o-animation: spin 1.3s infinite linear;
+animation: spin 1.3s infinite linear;
+-webkit-transform-origin: 50% 58%;
+transform-origin: 50% 58%;
+-ms-transform-origin: 50% 58%;
+}
+
+
 }
 @media  all  and (min-width: 376px) {
 
@@ -334,6 +392,18 @@ padding-right: 15px;
   padding-left: 24px;
 padding-right: 24px;
 }
+
+.symbols2{
+  color: red;
+-webkit-animation: spin 1.3s infinite linear;
+-moz-animation: spin 1.3s infinite linear;
+-o-animation: spin 1.3s infinite linear;
+animation: spin 1.3s infinite linear;
+-webkit-transform-origin: 50% 58%;
+transform-origin: 50% 58%;
+-ms-transform-origin: 50% 58%;
+}
+
 }
 @media  all and (min-width: 495px) and (max-width: 653px) {
 .navbar-nav > li {
@@ -973,5 +1043,20 @@ min-height: 100px;
 
 .js-masonry{
 height:auto;
+
+}
+
+ul.nav.navbar-nav {
+margin-top: 0px;
+}
+
+
+.alert.alert-error.alert-danger {
+margin-top: 39px;
+}
+
+
+.red{
+color:red;
 
 }

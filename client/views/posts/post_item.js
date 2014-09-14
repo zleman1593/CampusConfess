@@ -1,6 +1,16 @@
 var POST_HEIGHT = 250;
 var Positions = new Meteor.Collection(null);
 
+Template.postItem.rendered = function() {
+  if(!Session.get('loadingMore')){
+    Session.set('numberOfNewPost',Session.get('numberOfNewPost')+1);
+       $('.glyphicon-time').addClass("symbols2");
+       $('active').addClass("red");
+
+}
+
+};
+
 
 Template.postItem.helpers({
 
@@ -160,57 +170,3 @@ if (r === true) {
   },
 
   });
-/*
- 'click .discuss': function(e) {
-    e.preventDefault();
-Session.set('postPagePhoto',this.photoId);
-  },
-
-*/
-
-
-/*
- 'click .makeCommentsGoAway': function(e) {
-    e.preventDefault();
-    
-
-var $myself = $(e.target);
-       
-   //$('.overlay').css("display","block");
-   //$($me).next(".writeComment").removeClass('.writeComment')
-   $($myself).closest('.writeComment').css("display","none").fadeOut(1000);
-  $($myself).css("visibility","hidden").fadeOut(1000);
-//$($me).css("visibility","visible");
-
-$('.goAway').css("visibility","visible");
-$('.goAway').css("display","inline-block");
-
-  },*/
-/*
- 'click .goAway': function(e) {
-  e.preventDefault();
-
-Meteor.subscribe('comments',this._id);
-
-
-  var $me = $(e.target);
-       
-   //$('.overlay').css("display","block");
-   //$($me).next(".writeComment").removeClass('.writeComment')
-   $($me).next('.writeComment').css("display","block").hide().fadeIn(1000);
-  $($me).css("visibility","hidden").fadeOut(1000);
-  $('.makeCommentsGoAway').css("visibility","visible");
-$('.makeCommentsGoAway').css("display","inline-block");
- }*/
-
-
-
-
-
-
-
-
-  
-
-
-
