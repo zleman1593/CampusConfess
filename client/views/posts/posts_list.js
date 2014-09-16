@@ -4,9 +4,55 @@ Session.set('loadingMore',true);
 Session.set('submit', false);
 
 
-
-
 Template.postsList.created = function() {
+
+$(".photoExists a:lang(it)").fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic',
+
+      helpers : {
+        title : {
+          type : 'inside'
+        }
+      }
+    });
+
+
+$(".popup-with-form").fancybox({
+    maxWidth  : 800,
+    maxHeight : 600,
+    fitToView : false,
+    width   : '70%',
+    height    : '70%',
+    autoSize  : false,
+    closeClick  : false,
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+
+
+ $('.popup-with-form').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    //focus: '#name',
+
+    // When elemened is focused, some mobile browsers in some cases zoom in
+    // It looks not nice, so we disable it:
+    callbacks: {
+      beforeOpen: function() {
+        alert('alive');
+        if($(window).width() < 700) {
+          this.st.focus = false;
+        } else {
+          this.st.focus = '#name';
+        }
+      }
+    }
+  });
+
+};
+
+Template.postsList.rendered = function() {
    $('.js-masonry').magnificPopup({
         delegate: '.photoExists a:lang(it)',
         type: 'image',
@@ -48,6 +94,18 @@ Template.postsList.created = function() {
       }
     }
   });
+
+
+/*$('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });*/
+
 
 };
 

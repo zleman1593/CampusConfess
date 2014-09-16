@@ -131,9 +131,9 @@ $(window).scrollTop(Session.get('previousScrollPosition'));
 'click .navSubmit': function(e) {
     e.preventDefault();
      Session.set('submit', true);
-$('.popup-with-form').get(0).click()
+$('.popup-with-form').get(0).click();
 
-//$.magnificPopup.open(".popup-with-form");
+
 
 },
 

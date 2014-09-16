@@ -53,8 +53,8 @@ Template.postSubmit.events({
 'click .closeSubmit': function(e) {
     e.preventDefault();
     
-  $('.main-submit').addClass('magictime slideUp');
-    $('.posts').addClass('magictime slideUpLess');
+  //$('.main-submit').addClass('magictime slideUp');
+    //$('.posts').addClass('magictime slideUpLess');
    
   
 setTimeout(doSomething, 500);
@@ -63,7 +63,7 @@ function doSomething() {
     Session.set('submit', false);
   $('.post-confession').addClass('animated fadeIn');
  //$('.main-submit').removeClass('magictime slideUp');
-  $('.posts').removeClass('magictime slideUpLess');
+  //$('.posts').removeClass('magictime slideUpLess');
 
 }
 
