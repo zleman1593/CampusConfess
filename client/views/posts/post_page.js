@@ -4,14 +4,6 @@ Template.postPage.helpers({
   },
 
   owner: function() {
-   /* var args = Array.prototype.slice.call(arguments, 0);
-    args.pop();
-    
-    var active = _.any(args, function(name) {
-      return Router.current() && Router.current().route.name === name
-    });*/
-    
-//if (Router.current().route.name   === 'postPage' && Session.get('postPagePhoto') === 0 && this.userId == Meteor.userId()){
 if (Router.current().route.name   === 'postPage'  && this.userId == Meteor.userId()){
   return true;
 } else{
@@ -38,7 +30,6 @@ Template.postPage.events({
 
 
 var onSuccess = function (imageData, template) {
-alert('test');
    var data = {
       imageData: imageData,
       postId: template.data._id
@@ -46,10 +37,8 @@ alert('test');
 
   Meteor.call('submitPhoto', data, function(error, photoId) {
       if (error){
-        alert('meteor method error');
         throwError(error.reason);
       } else {
-          alert('Sucess');
       }
     });
 

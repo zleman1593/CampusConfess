@@ -1,5 +1,5 @@
 <template name="postItem">
-   <div class="post  {{removeWookMarkOnSmallScreen}} {{postWidth}}" {{attributes}}><!--{{attributes}}>!-->
+   <div class="post  {{removeWookMarkOnSmallScreen}} {{postWidth}} {{photoexistClass}} {{SinglepagePhotoMargin}}" {{attributes}}><!--{{attributes}}>!-->
    <div class="postBody container">
          <li>
               <p>{{body}}</p>
@@ -11,7 +11,7 @@
                    
     <div class="card">
      
-      <a class="item item-image">
+      <a lang='it'  class="item item-image" onclick="return false" href="{{image}}">
 
         <img  class="imagesize" src="{{image}}">
       </a>
@@ -99,14 +99,14 @@ href="#">
   <span class="glyphicon glyphicon-remove removalRequest"> </span>
 
 {{else}}
-  
+  {{#if flaggedbyCurrentUser}}
      <div class="wrapper">
    <a href="#" class='flag'><span class="glyphicon glyphicon-flag"></span></a>
 
     <div class="tooltip">Flag as Inappropriate </div>
   </div>
 
-
+   {{/if}}
    {{/if}}
 
 

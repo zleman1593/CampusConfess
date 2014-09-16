@@ -30,8 +30,13 @@ Meteor.methods({
       submitted: new Date().getTime(),
       commentsCount: 0,
       flagCount: 0,
+      flaggers: [], 
       school: Meteor.user().school,
-      upvoters: [], votes: 0
+      upvoters: [],
+      votes: 0,
+      baseScore: 0,
+      score: 0,
+      inactive: false,
     });
     
     var postId = Posts.insert(post);
@@ -68,10 +73,12 @@ Meteor.methods({
     if (!user)
       throw new Meteor.Error(401, "You need to login to flag");
      Posts.update({
-      _id: postId, 
+      _id: postId,
+      flaggers: {$ne: user._id}, 
 
     }, {
-      $inc: {flagCount: 1}
+      $inc: {flagCount: 1},
+      $addToSet: {flaggers: user._id},
     });
      // alert('This post has been flagged as inappropriate. Thank you');
   }

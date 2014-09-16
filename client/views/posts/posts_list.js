@@ -3,60 +3,21 @@ Session.set('loadingMore',true);
  Session.set('numberOfNewPost',0);
 Session.set('submit', false);
 
-if($( window ).width() > 654){
-Session.set('removeWookMarkOnSmallScreen', false);
-} else{
-  Session.set('removeWookMarkOnSmallScreen', true);
-}
 
 
-Template.postsList.rendered = function() {
-$('#example-offset-pixels').waypoint({
-  offset: 'bottom-in-view',
-  handler: function(direction) {
-    alert('load more');
-  }
-  });
 
-  enquire.register("screen and (max-width:654px)", {
-
-    // OPTIONAL
-    // If supplied, triggered when a media query matches.
-    match : function() {
-if ($('.myElements').wookmarkInstance) {
-            $('.myElements').wookmarkInstance.clear();
-          }
-Session.set('removeWookMarkOnSmallScreen', true);
-//$('.post-width').removeAttr( "style" );
-
-   },      
-                                
-    // OPTIONAL
-    // If supplied, triggered when the media query transitions 
-    // *from a matched state to an unmatched state*.
-    unmatch : function() {
-
-Session.set('removeWookMarkOnSmallScreen', false);
-
- handler.wookmark({
-          // Prepare layout options.
-          autoResize: true, // This will auto-update the layout when the browser window is resized.
-          container: $('.js-masonry'), // Optional, used for some extra CSS styling
-          offset: 5, // Optional, the distance between grid items
-          outerOffset: 20, // Optional, the distance to the containers border
-          //itemWidth: 310 // Optional, the width of a grid item
-          fillEmptySpace: false // Optional, fill the bottom of each column with widths of flexible height
+Template.postsList.created = function() {
+   $('.js-masonry').magnificPopup({
+        delegate: '.photoExists a:lang(it)',
+        type: 'image',
+        gallery: {
+          enabled: true,
+        },
+      image: {
+    tError: 'No image is associated with this submission.' // Error message when image could not be loaded
+  },
       });
-
-    },    
-                                
-    // OPTIONAL, defaults to false
-    // If set to true, defers execution of the setup function 
-    // until the first time the media query is matched
-    deferSetup : true,
-  
-});
-
+ 
 
   handler = $('.myElements');
 
@@ -66,7 +27,7 @@ Session.set('removeWookMarkOnSmallScreen', false);
           container: $('.js-masonry'), // Optional, used for some extra CSS styling
           offset: 5, // Optional, the distance between grid items
           outerOffset: 20, // Optional, the distance to the containers border
-          //itemWidth: 310 // Optional, the width of a grid item
+          //itemWidth: 400, // Optional, the width of a grid item
           fillEmptySpace: false // Optional, fill the bottom of each column with widths of flexible height
       });
 
@@ -104,7 +65,7 @@ return 'masonry_container';
     removeWookMarkOnSmallScreenPart2: function() {
    if( !Session.get('removeWookMarkOnSmallScreen')){
 
-return 'js-masonry ';
+return 'js-masonry';
 
    }
    return '';

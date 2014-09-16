@@ -5,7 +5,7 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <strong><a class='navbar-brand {{largeDetail}}' href="{{pathFor 'newPosts'}}">Campus Confess</a></strong>
+      <strong><a class='navbar-brand {{largeDetail}}' href="{{pathFor 'newPosts'}}">Campus Converse</a></strong>
      {{#if activeRoute}}
      
 
@@ -30,8 +30,8 @@
      <!--  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
      <div class='{{largeDetail}}'>
        <ul class="nav navbar-nav">
-       <li class="{{activeRouteClass 'newPosts' 'newPosts'}}">
-            <a id='navNewPosts' href="{{pathFor 'newPosts'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Newest</span><span class=" symbols glyphicon glyphicon-time "></span></a>
+       <li class="{{activeRouteClass 'newPosts' 'newPosts'}} navNewPosts">
+            <a  class="navNewPosts" href="{{pathFor 'newPosts'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Newest</span><span class=" symbols glyphicon glyphicon-time "></span></a>
           </li>
           <li class="{{activeRouteClass  'bestPosts' }}">
             <a href="{{pathFor 'bestPosts'}}" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Most Popular</span><span class=" symbols glyphicon glyphicon-fire"></span></a>
@@ -46,7 +46,7 @@
             </li>
             {{#if activeRoute}}
               <li>
-             <a id='navSubmit' href='#' data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Post</span><span class="symbols glyphicon glyphicon-edit"></span></a> 
+             <a class='navSubmit' href="#" data-toggle="collapse"  data-target=".nav-collapse"><span class="words">Post</span><span class="symbols glyphicon glyphicon-edit"></span></a> 
             </li>
              {{/if}}
           {{/if}}

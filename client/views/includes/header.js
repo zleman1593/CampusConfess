@@ -5,10 +5,10 @@ Tracker.autorun(function () {
 
 Session.set("CurrentNumberOfPostsLoaded", Posts.find({}).count());
 //TODO:Need to make this school specific
-alert(Router.current().postsLimit());
-if (Session.set("CurrentNumberOfPostsLoaded") !== Router.current().postsLimit()){
-alert('Someone added a post');
-}
+//alert(Router.current().postsLimit());
+//if (Session.set("CurrentNumberOfPostsLoaded") !== Router.current().postsLimit()){
+//alert('Someone added a post');
+//}
 
 });
 
@@ -18,27 +18,6 @@ alert('Someone added a post');
 
 Template.header.helpers({
 
-/*
- school: function(){
-
- if (Meteor.user()){
-
-      function capitaliseFirstLetter(string){
-          return string.replace(/\b./g, function(m){ return m.toUpperCase(); });// string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-
-      if(Meteor.user().school.length < 10){
-      return 'Campus Confess ' + capitaliseFirstLetter(Meteor.user().school.toLowerCase());
-    } else{
-       return capitaliseFirstLetter(Meteor.user().school.toLowerCase());
-    }
-}
-
-return '';
-
-  },
-*/
 largeDetail: function() {
 
 
@@ -129,30 +108,32 @@ Meteor.logout();
 'click .glyphicon-chevron-left' : function(e) {
     e.preventDefault();
 history.back();
+
+$(window).scrollTop(Session.get('previousScrollPosition'));
 //fadeContentIn();
 },
 
 'click .discuss' : function(e) {
     e.preventDefault();
 history.back();
+$(window).scrollTop(Session.get('previousScrollPosition'));
 //fadeContentIn();
 },
 
-'click #navNewPosts': function(e) {
+'click .navNewPosts': function(e) {
  Session.set('numberOfNewPost',0);
  $('.glyphicon-time').removeClass("symbols2");
        $('active').removeClass("red");
- 
-
+       $('html, body').animate({scrollTop:0}, 500);
 },
 
 
-'click #navSubmit': function(e) {
+'click .navSubmit': function(e) {
     e.preventDefault();
      Session.set('submit', true);
 $('.popup-with-form').get(0).click()
 
-//$.magnificPopup.open({".popup-with-form"});
+//$.magnificPopup.open(".popup-with-form");
 
 },
 

@@ -7,6 +7,21 @@ Template.postItem.rendered = function() {
     Session.set('numberOfNewPost',Session.get('numberOfNewPost')+1);
        $('.glyphicon-time').addClass("symbols2");
        $('active').addClass("red");
+       var post = Posts.findOne({},{sort: {submitted: -1}});
+       subs.subscribe('photos', post._id);
+       if ($('.myElements').wookmarkInstance) {
+            $('.myElements').wookmarkInstance.clear();
+          }
+var   handler = $('.myElements');
+       handler.wookmark({
+          // Prepare layout options.
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('.js-masonry'), // Optional, used for some extra CSS styling
+          offset: 5, // Optional, the distance between grid items
+          outerOffset: 20, // Optional, the distance to the containers border
+          //itemWidth: 310 // Optional, the width of a grid item
+          fillEmptySpace: false // Optional, fill the bottom of each column with widths of flexible height
+      });
      }
 
 }
@@ -35,6 +50,15 @@ return 'myElements';
      image: function () {
 
      return Photos.findOne({'_id':this.photoId}).image;// ,{sort: {"createdAt": -1}});
+    },
+
+
+ photoexistClass: function () {
+
+      if(this.photoId != ''){
+ return 'photoExists';
+}
+        return '';
     },
 
  photoexist: function () {
@@ -86,6 +110,17 @@ comments: function() {
     a.href = this.url;
     return a.hostname;
   },
+
+
+SinglepagePhotoMargin : function() {
+if (Router.current().route.name    === 'postPage'){
+
+      return 'SinglepagePhotoMargin';
+    } else {
+      return  '';
+    }
+  },
+
   upvotedClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.upvoters, userId)) {
@@ -101,6 +136,15 @@ comments: function() {
       return 'upvotable';
     } else {
       return '';
+    }
+  },
+
+    flaggedbyCurrentUser: function() {
+    var userId = Meteor.userId();
+    if (userId && !_.include(this.flaggers, userId)) {
+      return true;
+    } else {
+      return false;
     }
   },
 
@@ -154,6 +198,15 @@ if (r === true) {
     },
 
 
+
+
+'click .goAway': function(e) {
+var tempScrollTop = $(window).scrollTop();
+
+Session.set('previousScrollPosition', tempScrollTop);
+
+
+},
 
 'click .showPlaceToComment': function(e) {
     e.preventDefault();

@@ -5,7 +5,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.versionsFrom("0.9.2-rc5");
+  api.versionsFrom("0.9.2");
   api.use(['reload', 'reactive-var'], 'web');
   api.add_files("reload-on-resume.js", 'web.cordova');
   api.add_files("browser.js", 'web.browser');

@@ -63,6 +63,7 @@ min-height: 225px;
   border-radius: 3px;
      display:block;
     margin:auto;
+    max-width: 600px;
 }
 
 .postDetails{
@@ -153,9 +154,8 @@ margin-top: 21px;
 */
 
 .small-title{
+margin-top: -30px;
 
-
-  margin-top: -26px;
 }
 .removalRequest-comment{
 
@@ -326,6 +326,9 @@ html, body {
  display: inline-block;
  max-width: 320px;
 }
+.post-content p{
+min-width: 300px;
+}
 
 
 }
@@ -340,9 +343,10 @@ html, body {
   display: none;
   }
   .card{
-  margin-left: -26px;
-margin-right: -26px;
+  margin-left: -20px;
+margin-right: -20px;
 margin-top: -10px;
+margin-bottom: 10px;
 }
 #content {
 margin-top: 45px;
@@ -652,6 +656,7 @@ min-height: 20px;
 .post-content p{
 font-size: 12px;
 word-wrap: break-word;
+line-height: 16px;
 }
 
   .post .upvote {
@@ -1026,7 +1031,7 @@ height: 0px;
 
 
 .mfp-bg{
-background-color:rgba(11, 11, 11, 0.56);
+background-color:rgba(0, 0, 0, 0.97);
 }
 
 
@@ -1058,5 +1063,15 @@ margin-top: 39px;
 
 .red{
 color:red;
+
+}
+
+.post.myElements.SinglepagePhotoMargin {
+margin-left: 10%;
+margin-right: 10%;
+}
+
+  .card{
+margin-bottom: 10px;
 
 }

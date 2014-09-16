@@ -20,14 +20,8 @@ Template.photoToSubmit.helpers({
 
 
  photo: function () {
-//if (Session.get('photoId') != ''){
-return   Photos.findOne(Session.get('photoId'));
-      //return Photos.find({ '_id':Session.get('photoId')});
 
-   // } else {
- //return Photos.find({});
-
-  //  }
+      return   Photos.findOne(Session.get('photoId'));
     },
 
 
@@ -76,21 +70,24 @@ function doSomething() {
     },
 
 
-
   'submit form': function(e) {
     e.preventDefault();
 
 
 var textbox = document.getElementById("confession");
-    if(textbox.value.length >= 180 || Session.get('photoId') != ''){
+    if(textbox.value.length >= 18 || Session.get('photoId') != ''){
     
     if(textbox.value.length >= 10) {
 
-     $('.main-submit').addClass('magictime slideUp');
-
+     $('.main-submit').addClass('magictime vanishOut');
+     setTimeout(function(){
+ $.magnificPopup.close();
+    setTimeout(function(){
+$('.main-submit').removeClass('magictime vanishOut');
+    }, 1000);
+}, 600);
     var post = {
       confession: $(e.target).find('[name=confession]').val(),
-
       photoId: Session.get('photoId'),
     }
     
@@ -102,8 +99,6 @@ var textbox = document.getElementById("confession");
         if (error.error === 302)
           Router.go('postPage', {_id: error.details})
       } else {
-         //Session.set('submit', false);
-         $.magnificPopup.close();
       }
     });
   photoId: Session.set('photoId', '');
@@ -111,11 +106,11 @@ var textbox = document.getElementById("confession");
 
 
 } else {
-  alert('Please type a bit more');
+  alert('Please type at least a short caption.');
  }
 
  } else {
-  alert('Please type a bit more');
+  alert('Please type more than a few words.');
  }
 
    }

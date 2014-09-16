@@ -1,3 +1,19 @@
+
+
+Template.postsList.rendered = function() {
+
+
+
+if($( window ).width() > 654){
+Session.set('removeWookMarkOnSmallScreen', false);
+} else{
+  Session.set('removeWookMarkOnSmallScreen', true);
+}
+
+
+};
+
+
 Template.startPage.events({
     'click .confessions': function(e) {
     e.preventDefault();
@@ -13,7 +29,7 @@ Template.startPage.events({
 var tester = function () {
  //Session.set('showChoicePage', false);
 
-      Router.go('bestPosts');}
+      Router.go('newPosts');}
       var fader = function () {
          $('.macawBody').addClass('animated  fadeOut ');}
 setTimeout(fader,500);
@@ -33,9 +49,8 @@ setTimeout(fader,500);
      $('.about').addClass('magictime tinLeftOut');
         $('.welcometitle').addClass('magictime tinLeftOut');
 var tester = function () {
- //Session.set('showChoicePage', false);
 
-      Router.go('bestPosts');}
+      Router.go('newPosts');}
       var fader = function () {
          $('.macawBody').addClass('animated  fadeOut ');}
 setTimeout(fader,500);
